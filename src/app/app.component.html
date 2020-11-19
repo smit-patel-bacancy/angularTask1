@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="rows">
+    <h1>Welcome to Employee App !</h1>    <hr>
+    
+    <div class="col-sm-12">
+        <app-form (onSubmit)="onSubmitForm($event)"></app-form>    <hr>
+    </div>
+
+    <div class="col-sm-12">
+        <app-project-manager [details]="ProjectManagerDetails"></app-project-manager> 
+    </div>
+
+    <div class="col-sm-12">
+        <app-developer [details]="DeveloperDetails"></app-developer> 
+    </div>
+
+    <div class="col-sm-12">
+        <app-designer [details]="DesignerDetails"></app-designer>  
+    </div>
+
+    </div>
+</div>

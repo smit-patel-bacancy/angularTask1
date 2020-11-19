@@ -1,0 +1,24 @@
+<h3>Developer Table</h3>
+
+<div class="rows">
+    <div class="col-xs-7">
+        <table class="table table-hover table-sm" >
+            <tr>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>ContactNo</th>
+                <th>Designation</th>
+                <th>Salary</th>
+            </tr>
+            <tr *ngFor="let x of details" [ngStyle]="{color: style(x.Salary)}">
+                <td> {{ x.FirstName }} </td>
+                <td> {{ x.LastName }} </td>
+                <td> {{ x.ContactNo }} </td>
+                <td> {{ x.Designation }} </td>
+                <td> {{ x.Salary }} </td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-xs-5">
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<h3>Employee Form</h3>
+
+<table>
+    <tr>
+        <th> First Name : </th>
+        <td> <input type="text" [(ngModel)]="FirstName"> </td>
+    </tr>
+
+    <tr>
+        <th> Last Name :  </th>
+        <td> <input type="text" [(ngModel)]="LastName"> </td>
+    </tr>
+
+    <tr>
+        <th> Contact No :  </th>
+        <td> <input type="number" [(ngModel)]="ContactNo"> </td>
+    </tr>
+
+    <tr>
+        <th>Salary : </th>
+        <td> <input type="number" [(ngModel)]="Salary"> </td>
+    </tr>
+
+    <tr>
+        <th>Designation : </th>
+        <td>
+            <select  [(ngModel)]="Designation">
+                <option value="Project-Manager">Project-Manager</option>
+                <option value="Developer">Developer</option>
+                <option value="Designer">Designer</option>
+            </select>
+        </td>
+    </tr>
+
+</table>
+
+<br>
+<button class="btn btn-primary" (click)="onSubmitForm()">Submit</button>
+
