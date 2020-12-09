@@ -1,4 +1,4 @@
-import { Component, OnInit,CUSTOM_ELEMENTS_SCHEMA, Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ProjectManagerDetails } from './project-manager.model';
 
 @Component({
@@ -8,20 +8,20 @@ import { ProjectManagerDetails } from './project-manager.model';
 })
 
 export class ProjectManagerComponent implements OnInit {
-  @Input()details :  ProjectManagerDetails[]= [];
+  @Input() details: ProjectManagerDetails[] = [];
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  style(Salary: number){
-    if ( Salary < 10000) {
+  style(Salary: number) {
+    if (Salary < 10000) {
       return '#0000ff';
     }
-    else if ( Salary >= 10000 && Salary < 20000 ) {
+    else if (Salary >= 10000 && Salary < 20000) {
       return '#ff0000';
     }
-    else if ( Salary >= 20000 && Salary < 30000 ){
+    else if (Salary >= 20000 && Salary < 30000) {
       return '#00ff00';
     }
     else {

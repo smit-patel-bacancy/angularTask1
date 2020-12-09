@@ -1,5 +1,4 @@
-import { Component, OnInit,EventEmitter, Output } from '@angular/core';
-import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-form',
@@ -13,7 +12,7 @@ export class FormComponent implements OnInit {
   Salary: number;
   Designation = '';
 
-  @Output()onSubmit = new EventEmitter<{ FirstName: string, LastName: string, ContactNo: number, Salary: number, Designation: string }>();
+  @Output() onSubmit = new EventEmitter<{ FirstName: string, LastName: string, ContactNo: number, Salary: number, Designation: string }>();
 
 
   constructor() { }
@@ -22,7 +21,7 @@ export class FormComponent implements OnInit {
   }
 
   onSubmitForm() {
-    this.onSubmit.emit({ FirstName: this.FirstName, LastName: this.LastName, ContactNo: this.ContactNo, Salary: this.Salary,Designation: this.Designation });
+    this.onSubmit.emit({ FirstName: this.FirstName, LastName: this.LastName, ContactNo: this.ContactNo, Salary: this.Salary, Designation: this.Designation });
     this.FirstName = '';
     this.LastName = '';
     this.ContactNo = null;
